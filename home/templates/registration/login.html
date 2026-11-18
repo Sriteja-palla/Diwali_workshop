@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title>
+<style>
+  body{font-family:Arial; background:linear-gradient(lavender,pink,blueviolet); display:flex; justify-content:center; padding-top:80px;}
+  .box{background:white; padding:25px; border-radius:10px; width:320px; border:1px solid #ddd; text-align:center;}
+  input{width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ddd;}
+  button{background:blueviolet; color:white; border:none; padding:10px; width:100%; border-radius:8px; font-weight:bold; cursor:pointer;}
+</style>
+
+</head>
+<body>
+<div class="box">
+  <h2>Login Here</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  <p style="font-size:13px; color:#666;"></p>
+</div>
+</body>
+</html>
